@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block stylesheet %}
+<link rek="stylesheet" href="/assets/css/products.css">
+{% endblock %}
+
+{% block content %}
+
+<section id = "produits">
+    <div class = "background_wine"></div>
+    <h2><div class="m-2">CARTE DES PRODUITS</h2>
+    <h3>Nos vins</h3>
+    <div class="wine_container  ">
+        <div class = "row d-flex justify-content-center">
+            <div class=" col-md-2">
+                <img src="../assets/images/rouge.jpg" alt="vin rouge" width="300px" height="400px"/>
+                <p><a href="">Vin ROUGE</a></p>
+            </div>
+            <div class=" col-md-2">
+                <img src="../assets/images/blanc.jpg" alt="vin blanc" width="300px" height="400px"/>
+                <p><a href="">Vin BLANC</a></p>
+            </div>
+            <div class=" col-md-2">
+                <img src="../assets/images/rose.jpg" alt="vin rose" width="300px" height="400x"/>
+                <p><a href="">Vin ROSÉ</a></p>
+            </div>
+        </div>
+    <h3>Autres produits</h3>
+        <div class = "row d-flex justify-content-center">
+            <div class=" col-md-2">
+                <img src="../assets/images/jus-rouge.jpg" alt="jus de raisin rouge"width="300x" height="400px"/>
+                <p><a href="">JUS DE FRUITS</a></p>
+            </div>
+            <div class=" col-md-2">
+                <img src="../assets/images/spiritueux-poire.jpg" alt="" width="300px" height="400px"/>
+                <p><a href="">SPIRITUEUX</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+

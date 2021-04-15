@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Slab:wght@300&family=Viaoda+Libre&display=swap%27');
+@import "products.css";
 @import "header.css";
+
 :root
 {
     --primary:#62011D;
