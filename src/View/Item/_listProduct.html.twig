@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+
+{% block content %}
+<div class = "container">
+  <div class = "row">
+{% for product in products %}
+    <div class ="col-6">
+      <div class="card" style="width: 18rem;">
+        {{product.image}}
+        <div class="card-body">
+          <h5 class="card-title">{{product.category}}</h5>
+          <p class="card-text">{{product.description}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      </div>
+{% endfor %}
+    </div>
+</div>
+
+{% endblock %}
