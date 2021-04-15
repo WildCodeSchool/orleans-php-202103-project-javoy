@@ -4,5 +4,5 @@ namespace App\Model;
 
 class ProductManager extends AbstractManager
 {
-    public const TABLE = 'products';
+    public const TABLE = 'product';
 }
