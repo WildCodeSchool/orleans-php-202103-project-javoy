@@ -112,12 +112,12 @@ class AdminProductController extends AbstractController
     public function edit(int $id): string
     {
         $errors = [];
-        
+
         $productManager = new ProductManager();
         $product = $productManager->selectOneById($id);
 
-        if($product === false) {
-            $errors[] = 'Le produit séléctionné n\'existe pas' ;
+        if ($product === false) {
+            $errors[] = 'Le produit séléctionné n\'existe pas';
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -132,7 +132,6 @@ class AdminProductController extends AbstractController
                 $productManager->update($product);
                 header('Location: /AdminProduct/add/');
             }
-
         }
 
         return $this->twig->render('Admin/edit.html.twig', [
