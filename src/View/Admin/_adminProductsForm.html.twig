@@ -1,7 +1,7 @@
 <!-- Form -->
 <div class="container">
 
-  <form action="" method="POST" NOVALIDATE>
+  <form action="" method="POST">
 
    <label for="exampleFormControlInput1" class="form-label">Catégorie de produit :</label>
     <select class="form-select mb-3" aria-label="Default select example" name="category" required>
@@ -50,20 +50,20 @@
       <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="15/04/2021" value="{{ product.created_at }}" name="created_at" required>
     </div>
 
-<!-- Display errors -->
+    <!-- Display errors -->
 
-{% if errors is empty  %}
-  {% else %}
-    <ul class="error">
-      {% for error in errors %}
-        <li>{{ error }}</li>
-      {% endfor %}
-    </ul>
-{% endif %}
-<!-- End display errors -->
+    {% if errors is empty  %}
+      {% else %}
+        <ul class="error">
+          {% for error in errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+    {% endif %}
+    <!-- End display errors -->
 
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Ajouter votre produit</button>
+      <button class="btn btn-primary" type="submit">{{ buttonName|default('Ajouter') }}</button>
     </div>
 
   </form>
