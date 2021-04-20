@@ -4,7 +4,15 @@
   <form action="" method="POST" NOVALIDATE>
 
    <label for="exampleFormControlInput1" class="form-label">Catégorie de produit :</label>
-    <select class="form-select mb-3" aria-label="Default select example" value= "{{ product.category }}" name="category" required>
+    <select class="form-select mb-3" aria-label="Default select example" name="category" required>
+
+    {% if product.category is empty %}
+    <!-- Si pas de produit alors on affiche rien -->
+      {% else %}
+      <!-- Si on a un produit alors on affiche la catégorie du produit -->
+        <option value="{{ product.category }}">{{ product.category }}</option>
+    {% endif %}
+
       <option value="Rouge">Vin rouge</option>
       <option value="Blanc">Vin blanc</option>
       <option value="Rosé">Vin rosé</option>
@@ -24,7 +32,7 @@
 
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Description du produit</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Description du produit" value="{{ product.description }}" rows="3" name="description" required></textarea>
+      <textarea class="form-control" id="exampleFormControlTextarea1"  placeholder="Description du produit" rows="3" name="description" required>{{ product.description }}</textarea>
     </div>
 
     <div class="mb-3">
