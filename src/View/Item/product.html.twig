@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	<h1>CARTE DES PRODUITS</h1>
+	<p>{{ category.name }}
+		{{ category.image }}</p>
+	<a href="/category/edit/{{ category.name }}">Edit</a>
+	<form action="/category/delete/{{category.name}}" method="POST">
+		<button>Delete</button>
+	</form>
+	<a href="/category/index">Back</a>
+{% endblock %}
