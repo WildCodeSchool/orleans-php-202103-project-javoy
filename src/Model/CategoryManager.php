@@ -3,13 +3,12 @@
 namespace App\Model;
 
 class CategoryManager extends AbstractManager
-
 {
-public const TABLE = 'category'; 
+    public const TABLE = 'category';
 
-        public function listCategory(): void
-        {
-            $categoryManager = new CategoryManager();
-            $categories = $categoryManager->selectAll();
-        }
+    public function listCategory(): void
+    {
+        $categoryManager = new CategoryManager();
+        $categoryManager->selectAll();
+    }
 }
