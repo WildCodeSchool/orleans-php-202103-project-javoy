@@ -2,9 +2,8 @@
 @import "header.css";
 @import "footer.css";
 
-:root
-{
-    --primary:#62011D;
+:root{
+    --primary:#642A2A;
     --secondary:#F2E8DF;
     --light:#ffffff;
     --dark:#080100;
@@ -13,12 +12,10 @@
     --main-font:'Raleway',sans-serif;
     --title-font:'Roboto Slab',serif;
 
-    --simple-space: 8px;
-    --double-space: 16px;
-
 }
-
-
+body{ 
+    padding-top: 70px;
+}
 
 h1{
     color: var(--secondary);
