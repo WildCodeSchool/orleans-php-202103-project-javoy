@@ -1,15 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Slab:wght@300&family=Viaoda+Libre&display=swap%27');
 @import "category.css";
 @import "header.css";
-
-:root {
-    --primary: #62011D;
-    --secondary: #F2E8DF;
-    --light: #ffffff;
-    --dark: #080100;
-    --main-font: 'Raleway', sans-serif;
-    --title-font: 'Roboto Slab', serif;
-
 @import "footer.css";
 
 :root
