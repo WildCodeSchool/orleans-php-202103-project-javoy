@@ -6,6 +6,7 @@ use App\Model\ListProductManager;
 
 class AdminListProductController extends AbstractController
 {
+
     public function index(): string
     {
         $listProducts = new ListProductManager();
