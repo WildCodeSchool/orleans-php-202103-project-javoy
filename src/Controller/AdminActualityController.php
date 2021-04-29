@@ -12,7 +12,7 @@ class AdminActualityController extends AbstractController
     public function index(): string
     {
         $actualityManager = new ActualityManager();
-        $actualities = $actualityManager->selectAll();
+        $actualities = $actualityManager->selectAllOrderByDesc();
 
         return $this->twig->render('Admin/listActuality.html.twig', ['actualities' => $actualities]);
     }

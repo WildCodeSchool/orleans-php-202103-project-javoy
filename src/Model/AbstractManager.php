@@ -41,6 +41,16 @@ abstract class AbstractManager
         return $this->pdo->query($query)->fetchAll();
     }
 
+    public function selectAllOrderByDesc(string $orderBy = '', string $direction = 'DESC'): array
+    {
+        $query = 'SELECT * FROM ' . static::TABLE;
+        if ($orderBy) {
+            $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
+        }
+
+        return $this->pdo->query($query)->fetchAll();
+    }
+
     /**
      * Get one row from database by ID.
      *
