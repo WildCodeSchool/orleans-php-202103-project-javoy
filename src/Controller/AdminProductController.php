@@ -7,7 +7,6 @@ use App\Model\ProductManager;
 class AdminProductController extends AbstractController
 {
     private const PRODUCT_MAX_LENGHT = 80;
-    private const DESCRIPTION_MAX_LENGHT = 255;
     private const PRODUCT_MIN_INT = 0;
     public const MAX_UPLOAD_FILESIZE = 1000000;
     public const ALLOWED_MIMES = ['image/jpeg', 'image/png'];
@@ -42,15 +41,9 @@ class AdminProductController extends AbstractController
     // Suite des verifications
     private function validate($product)
     {
-        $categoryValue = ["Rouge", "Blanc", "Rosé", "Alcool de fruit", "Jus de fruit"]; // category list
 
         // validations
         $errors = $this->isEmpty($product);
-
-        // Category verification
-        if (!in_array($product['category'], $categoryValue)) {
-            $errors[] = 'Veuillez renseigner une catégorie valide';
-        }
 
         //name verification
         if (strlen($product['name']) > self::PRODUCT_MAX_LENGHT) {
@@ -67,10 +60,6 @@ class AdminProductController extends AbstractController
             $errors[] = 'L\'année doit etre un nombre supérieur à ' . self::PRODUCT_MIN_INT;
         }
 
-        // description verification
-        if (strlen($product['description']) > self::DESCRIPTION_MAX_LENGHT) {
-            $errors[] = 'La description doit contenir moins de ' . self::DESCRIPTION_MAX_LENGHT . ' charactères';
-        }
         return $errors;
     }
 
